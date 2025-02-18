@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" contents="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="Untitled-6.css">
+        </head>
+        <body>
+            <div id="header">
+                <div class="container"> 
+                    <nav>
+                        <img src="images/logo.png" alt="logo">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-text">
+                        <p>Front end developer</p>
+                        <h1>Hello i am <span>Kevin</span><br>Salt from Pune</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="file:///C:/Users/RAJ/Downloads/images/user.png">
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="sub-title">About me</h1>
+                            <p>I’m a software engineer who loves creating websites and apps. I believe that you have to be able to see the big picture when you’re building something, and that’s why I like to work with a team. It’s also why I love working in groups where everyone has a voice, but we all work together toward the same goal—to make your site better than you could ever do on your own.You can find me playing video games or watching TV shows when I’m not working on my projects or building excellent new tools for my clients.</p>
+                       <div class="tab-titles">
+                        <p class="tab-links active-link " onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                       </div>
+                       <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br> designing web/app interfaces</li>
+                            <li><span>web devloping</span><br> designing website development</li>
+                            <li><span>App Developing</span><br> create virtual app development</li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021-current</span><br> ui and ux designing at mit pune</li>
+                            <li><span>2019-2021</span><br> Team lead at startapp LLC</li>
+                            <li><span>2017-19</span><br> manager of infosys springboard at mumbai</li>
+                            <li><span>2014-16</span><br> internship of cloud computing at software it market</li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents"id="education">
+                        <ul>
+                            <li><span>2021</span><br> ui/ux designing completed in mumbai</li>
+                            <li><span>2024</span><br>diploma completed in comp engineering</li>
+                            <li><span>2025</span><br> my b.e course is succesfully completed</li>
+                        </ul>
+                       </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                var tablinks=document.getElementsByClassName("tab-links");
+                var tabcontents=document.getElementsByClassName("tab-contents");
+                function opentab(tabname){
+                    
+                    for(tablink of tablinks){
+                        tablink.classList.remove("active-link");
+                     }
+                     for(tabcontent of tabcontents){
+                        tabcontent.classList.remove("active-tab");
+                     }
+                     event.currentTarget.classList.add("active-link");
+                     document.getElementById(tabname).classList.add("active-tab");
+                }
+            </script>
+        </body>
+</html>
+
